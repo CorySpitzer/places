@@ -12,9 +12,16 @@ $(function() {
     var newPlace = { location: inputtedLocation,
                      startDate: inputtedStartDate,
                      endDate: inputtedEndDate,
-                     companions: [inputtedCompanion],
-                     landmarks: [inputtedLandmark],
+                     companions: [],
+                     landmarks: [],
                      notes: inputtedNotes };
+
+    $(".new-companion").each(function() {
+      var inputtedCompanion = $(this).find("input#companion").val();
+      newPlace.companions.push(inputtedCompanion);
+    });
+
+
 
 
     $("ul#places").append("<li><span class='place'>" + newPlace.location + "</li>");
@@ -24,13 +31,18 @@ $(function() {
 
       $("#place-to-show h2").text(newPlace.location);
 
+      newPlace.companions.forEach(function(companion) {
+        $('ul.display-companion').html('<li>' + companion + '</li>');
+        console.log("in loop");
+      });
+
       $('.start-date').text(newPlace.startDate);
       $('.end-date').text(newPlace.endDate);
-      $('.companion').text(newPlace.companions);
-      $('.landmark').text(newPlace.landmarks);
+      // $('.companion').text(newPlace.companions);
+      // $('.landmark').text(newPlace.landmarks);
       $('.notes').text(newPlace.notes);
 
-    })
+    });
   });
 
   $("#add-companion").click(function() {
