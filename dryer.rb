@@ -9,7 +9,7 @@
 # puts output
 
 
-nameHash = { ".start-date" => "startDate", ".end-date" => "endDate", ".companions" => "inputtedCompanion", ".landmarks" => "inputtedLandmark", ".notes" => "inputtedNotes" }
+nameHash = { ".start-date" => "startDate", ".end-date" => "endDate", ".companions" => "companions", ".landmarks" => "landmarks", ".notes" => "notes" }
 
 
 output = ""
