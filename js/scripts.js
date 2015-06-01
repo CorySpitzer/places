@@ -16,6 +16,7 @@ $(function() {
                      landmarks: [inputtedLandmark],
                      notes: inputtedNotes };
 
+
     $("ul#places").append("<li><span class='place'>" + newPlace.location + "</li>");
 
     $(".place").last().click(function() {
@@ -30,6 +31,20 @@ $(function() {
       $('.notes').text(newPlace.notes);
 
     })
+  });
+
+  $("#add-companion").click(function() {
+    $("#new-companion").append('<div class="form-group">' +
+                                  '<label for="companion">Travel companion</label>' +
+                                  '<input type="text" class="form-control" id="form-control companion">' +
+                                '</div>');
+  });
+
+  $("#add-landmark").click(function() {
+    $("#new-landmark").append('<div class="form-group">' +
+                                  '<label for="landmark">Landmark</label>' +
+                                  '<input type="text" class="form-control" id="form-control landmark">' +
+                                '</div>');
   });
 
 });

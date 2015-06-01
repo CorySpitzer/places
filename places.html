@@ -27,20 +27,26 @@
               <label for="new-end-date">End date</label>
               <input type="text" class="form-control" id="new-end-date">
             </div>
-            <div class="form-group">
-              <label for="companion">Travel companions</label>
-              <input type="text" class="form-control" id="companion">
+            <div id="new-companion">
+              <div class="form-group">
+                <label for="companion">Travel companion</label>
+                <input type="text" class="form-control" id="form-control companion">
+              </div>
             </div>
-            <div class="form-group">
-              <label for="landmark">Landmarks</label>
-              <input type="text" class="form-control" id="landmark">
+            <div id="new-landmark">
+              <div class="form-group">
+                <label for="landmark">Landmark</label>
+                <input type="text" class="form-control" id="form-control landmark">
+              </div>
             </div>
             <div class="form-group">
               <label for="notes">Notes</label>
               <input type="text" class="form-control" id="notes">
             </div>
 
-            <button type="submit" class="btn">Add</button>
+            <button type="submit" class="btn btn-success">Add</button>
+            <span class='btn btn-success' id='add-companion'>Add Another Companion</span>
+            <span class='btn btn-success' id='add-landmark'>Add Another Landmark</span>
           </form>
 
           <h2>Places:</h2>
