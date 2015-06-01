@@ -27,12 +27,16 @@
               <label for="new-end-date">End date</label>
               <input type="text" class="form-control" id="new-end-date">
             </div>
-            <div class="new-companion">
-              <div class="form-group">
-                <label for="companion">Travel companion</label>
-                <input type="text" class="form-control" id="companion">
+
+            <div id="new-companions">
+              <div class="new-companion">
+                <div class="form-group">
+                  <label for="companion">Travel companion</label>
+                  <input type="text" class="form-control new-companion-input">
+                </div>
               </div>
             </div>
+
             <div id="new-landmark">
               <div class="form-group">
                 <label for="landmark">Landmark</label>
@@ -60,7 +64,7 @@
 
               <p>start-date: <span class='start-date'></span></p>
               <p>end-date: <span class='end-date'></span></p>
-              <p>companion: <ul class='display-companion'></ul></p>
+              <p>companion: <ul id='display-companions'></ul></p>
               <p>landmark: <span class='landmark'></span></p>
               <p>notes: <span class='notes'></span></p>
 

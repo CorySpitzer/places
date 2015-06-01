@@ -14,15 +14,13 @@ $(function() {
                      endDate: inputtedEndDate,
                      companions: [],
                      landmarks: [],
-                     notes: inputtedNotes };
+                     notes: inputtedNotes
+    };
 
     $(".new-companion").each(function() {
-      var inputtedCompanion = $(this).find("input#companion").val();
-      newPlace.companions.push(inputtedCompanion);
+      // var inputtedCompanion = $(this).find("input#companion").val();
+      newPlace.companions.push($(this).find("input.new-companion-input").val());
     });
-
-
-
 
     $("ul#places").append("<li><span class='place'>" + newPlace.location + "</li>");
 
@@ -30,10 +28,10 @@ $(function() {
       $("#place-to-show").show();
 
       $("#place-to-show h2").text(newPlace.location);
-
       newPlace.companions.forEach(function(companion) {
-        $('ul.display-companion').html('<li>' + companion + '</li>');
+        $('ul#display-companions').append('<li>' + companion + '</li>');
         console.log("in loop");
+        // debugger;
       });
 
       $('.start-date').text(newPlace.startDate);
@@ -46,10 +44,16 @@ $(function() {
   });
 
   $("#add-companion").click(function() {
-    $("#new-companion").append('<div class="form-group">' +
-                                  '<label for="companion">Travel companion</label>' +
-                                  '<input type="text" class="form-control" id="form-control companion">' +
-                                '</div>');
+    $("#new-companions").append(
+      '<div id="new-companions">' +
+        '<div class="new-companion">' +
+          '<div class="form-group">' +
+            '<label for="companion">Travel companion</label>' +
+            '<input type="text" class="form-control new-companion-input">' +
+          '</div>' +
+        '</div>' +
+      'div'
+    );
   });
 
   $("#add-landmark").click(function() {
