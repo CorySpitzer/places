@@ -26,7 +26,12 @@ $(function() {
                             ]
       $("#place-to-show h2").text(newPlace.location);
 
-      $(".start-date").text(newPlace.startDate);
+      $('.start-date').text(newPlace.startDate);
+      $('.end-date').text(newPlace.endDate);
+      $('.companions').text(newPlace.inputtedCompanion);
+      $('.landmarks').text(newPlace.inputtedLandmark);
+      $('.note').text(newPlace.inputtedNotes);
+
     })
   });
 
